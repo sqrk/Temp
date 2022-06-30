@@ -10,7 +10,7 @@ with open(config_path) as f:
 print(params)
 
 params["model"]["test_ds"]["batch_size"] = 8
-params["model"]["test_ds"]["manifest_filepath"] = main_dir + "Manifests/Nemo/VCTK-test-manifest.json"
+params["model"]["test_ds"]["manifest_filepath"] = "Manifests/Nemo/VCTK-test-manifest.json"
 params["model"]["test_ds"]["sample_rate"] = 48000
 
 model = nemo_asr.models.EncDecCTCModelBPE.from_pretrained(model_name="stt_en_conformer_ctc_small") #MODIF
